@@ -67,18 +67,23 @@ for label, start, end, color in contract_spans:
 final_equity = trades['Equity'].iloc[-1]
 net_profit = trades['CumPnL'].iloc[-1]
 ax.scatter([trades['ExitTime'].iloc[-1]], [final_equity], color='#1b7837', s=50, zorder=5)
+# Methodological watermark / label (top-left)
+ax.text(0.03, 0.94, 'STATUS: Development / In-Sample (N \u2265 612 trials, lower bound)\nBenchmark: Buy-and-Hold N/A',
+        transform=ax.transAxes, fontsize=8.5, verticalalignment='top', horizontalalignment='left',
+        bbox=dict(boxstyle='square,pad=0.4', facecolor='#fffde7', edgecolor='#ffe082', alpha=0.95),
+        color='#795548', fontweight='bold')
+
+# Legend below status box on upper-left
+ax.legend(loc='upper left', bbox_to_anchor=(0.03, 0.81), frameon=True, facecolor='white', framealpha=0.9, fontsize=8.5)
+
+# Annotations for key milestones (green box in lower-right empty zone)
 ax.annotate(f'Final Equity: ${final_equity:,.2f}\nNet Profit: +${net_profit:,.2f} (+28.20%)\nProfit Factor: 3.15 (108 Trades)',
             xy=(trades['ExitTime'].iloc[-1], final_equity),
-            xytext=(-170, -25), textcoords='offset points',
-            bbox=dict(boxstyle='round,pad=0.5', facecolor='#e8f5e9', edgecolor='#81c784', alpha=0.9),
+            xytext=(0.97, 0.18), textcoords='axes fraction',
+            ha='right', va='center',
+            bbox=dict(boxstyle='round,pad=0.5', facecolor='#e8f5e9', edgecolor='#81c784', alpha=0.95),
             fontsize=9, fontweight='bold', color='#1b5e20',
-            arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=-0.2', color='#2e7d32'))
-
-# Methodological watermark / label
-ax.text(0.02, 0.93, 'STATUS: Development / In-Sample Incubation (N ≥ 612 Trials Lower Bound; 537 ES + 74 NQ exploratory + 1 NQ-v1)\nBenchmark: Buy-and-Hold N/A (continuous tick-level series unavailable)',
-        transform=ax.transAxes, fontsize=8.5, verticalalignment='top',
-        bbox=dict(boxstyle='square,pad=0.4', facecolor='#fffde7', edgecolor='#ffe082', alpha=0.95),
-        color='#795548', fontweight='semibold')
+            arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=-0.15', color='#2e7d32', lw=1.2))
 
 ax.set_title('FlowX Institutional NQ v1 — Cumulative Equity Growth ($50,000 Base)', fontsize=12, fontweight='bold', pad=12, color='#2c3e50')
 ax.set_xlabel('Date', fontsize=10, fontweight='bold', color='#333333')
@@ -86,7 +91,6 @@ ax.set_ylabel('Portfolio Equity (USD)', fontsize=10, fontweight='bold', color='#
 ax.yaxis.set_major_formatter(ticker.StrMethodFormatter('${x:,.0f}'))
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
 ax.set_ylim(48500, 66000)
-ax.legend(loc='lower right', frameon=True, facecolor='white', framealpha=0.9, fontsize=9)
 plt.tight_layout()
 plt.savefig(os.path.join(output_dir, 'chart_1_equity_curve.png'), dpi=300)
 plt.close()
@@ -173,8 +177,9 @@ plt.setp(ax2.xaxis.get_majorticklabels(), rotation=40, ha='right', fontsize=8)
 for bar in bars:
     yval = bar.get_height()
     va = 'bottom' if yval >= 0 else 'top'
+    val_str = f"-${abs(yval):,.0f}" if yval < 0 else f"${yval:,.0f}"
     ax2.text(bar.get_x() + bar.get_width() / 2.0, yval + (50 if yval >= 0 else -100),
-             f'${yval:,.0f}', ha='center', va=va, fontsize=7.5, fontweight='bold')
+             val_str, ha='center', va=va, fontsize=7.5, fontweight='bold')
 
 plt.tight_layout()
 plt.savefig(os.path.join(output_dir, 'chart_3_returns_dist.png'), dpi=300)

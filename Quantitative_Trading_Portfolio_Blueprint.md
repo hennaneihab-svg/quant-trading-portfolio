@@ -1,7 +1,7 @@
 # Quantitative Trading & Algorithmic Backtesting Portfolio
 **Version:** October 2026  
 **Joint Research Dossier (ESE Oran)**  
-**Target Programs:** MSc in Quantitative Finance / Data Science for Finance (UNIVPM Ancona, UNIPG Perugia, UNICAL Calabria, UNISI Siena; 2027/2028 Intake)
+**Target Programs:** MSc programmes in Quantitative Finance / Data Science for Finance, 2027/2028 Intake
 
 * **Yasser REZKI** (Data Science for Economics & Business)
 * **Ramy Ihab HENNANE** (Economics, Finance & Markets)
