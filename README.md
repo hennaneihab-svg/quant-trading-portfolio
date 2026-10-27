@@ -112,3 +112,7 @@ Performance figures reflect the $50,000 initial notional capital over the 219 bu
 * Lo, A. W. (2002). The statistics of Sharpe ratios. *Financial Analysts Journal*, 58(4), 36–52.
 * Mertens, E. (2002). Comments on variance of the IID estimator in Lo (2002). Working paper, University of Basel.
 * White, H. (2000). A reality check for data snooping. *Econometrica*, 68(5), 1097–1126.
+
+---
+
+© 2026 Ramy Ihab Hennane & Yasser Rezki. All rights reserved. Provided for academic review.
