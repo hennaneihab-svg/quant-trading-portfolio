@@ -1,8 +1,10 @@
 # Quantitative Trading & Algorithmic Backtesting Portfolio
 
+**Version / Date:** October 2026  
 **Authors:** Yasser REZKI & Ramy Ihab HENNANE (ESE Oran)  
 **Academic Target:** MSc in Quantitative Finance / Financial Data Science (2027/2028 Intake)  
-**Strategy Focus:** Microstructure Order Flow Imbalances & VWAP Mean Reversion on CME E-mini Nasdaq-100 Futures (`NQ`)
+**Strategy Focus:** Microstructure Order Flow Imbalances & VWAP Mean Reversion on CME E-mini Nasdaq-100 Futures (`NQ`)  
+**Repository URL:** https://github.com/hennaneihab-svg/quant-trading-portfolio (Private Custody)
 
 ---
 
@@ -35,6 +37,7 @@ Key methodological disclosures:
 ├── README.md                                    # Research overview, disclosures, and protocol status
 ├── Quantitative_Trading_Portfolio_Blueprint.md  # Complete research dossier & econometric blueprint
 ├── Quantitative_Trading_Portfolio_Blueprint.docx# Publication-ready Word document
+├── Quantitative_Trading_Portfolio_Blueprint.pdf # Publication-ready PDF document (8 pages)
 ├── chart_0_pipeline.png                         # Quantitative execution pipeline architecture
 ├── chart_1_equity_curve.png                     # Cumulative portfolio equity trajectory ($50k base)
 ├── chart_2_drawdown.png                         # High-water mark underwater drawdown profile (%)

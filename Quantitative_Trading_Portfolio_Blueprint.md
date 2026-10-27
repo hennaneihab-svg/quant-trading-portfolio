@@ -1,10 +1,11 @@
 # Quantitative Trading & Algorithmic Backtesting Portfolio
+**Version:** October 2026  
 **Joint Research Dossier (ESE Oran)**  
 **Target Programs:** MSc in Quantitative Finance / Data Science for Finance (UNIVPM Ancona, UNIPG Perugia, UNICAL Calabria, UNISI Siena; 2027/2028 Intake)
 
 * **Yasser REZKI** (Data Science for Economics & Business)
 * **Ramy Ihab HENNANE** (Economics, Finance & Markets)
-* **Code Repository & Research Artifacts:** `[Insert GitHub Repository URL / Private Research Release Available Upon Request]`
+* **Code Repository & Research Artifacts:** [https://github.com/hennaneihab-svg/quant-trading-portfolio](https://github.com/hennaneihab-svg/quant-trading-portfolio)
 
 ---
 
@@ -180,7 +181,7 @@ The following methodological limitations are explicitly acknowledged:
 
 ### 6. Out-of-Sample Validation Protocol (Frozen Before Data Examination)
 
-To test the strategy on unexamined data, a validation protocol was frozen before data examination based on the evaluation suite `validation/eval_combine_50k_suite.py` (hash `fa24f532...`) and frozen strategy hash `9f3664c3...` (recorded in the research trial registry). No trial in the registry used data before 2025-10-28 (recorded in the research trial registry and contamination ledger).
+To test the strategy on unexamined data, a validation protocol was frozen before data examination based on the evaluation suite `validation/eval_combine_50k_suite.py` (hash `fa24f532b9dd6a939f3443037e51af6efd5d78599fe0c10be6a30e8c63a865dc`) and frozen strategy hash `9f3664c3651899aad6bba8d565af4a57301b71e279ee2cc280f37deaf6164489` (recorded in the research trial registry). No trial in the registry used data before 2025-10-28 (recorded in the research trial registry and contamination ledger).
 
 * **Frozen Code Hash (SHA-256):** `9f3664c3651899aad6bba8d565af4a57301b71e279ee2cc280f37deaf6164489` (`FlowX_Institutional_NQ_v1.cs`).
 * **Frozen Evaluation Suite (SHA-256):** `fa24f532b9dd6a939f3443037e51af6efd5d78599fe0c10be6a30e8c63a865dc` (`validation/eval_combine_50k_suite.py`).
